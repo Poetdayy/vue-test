@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard-toolbar">
 	<div class="toolbar-tabs">
-	  <div 
-		v-for="tab in tabs" 
+	  <div
+		v-for="tab in tabs"
 		:key="tab.name"
 		:class="['tab', { active: activeTab === tab.name }]"
 		@click="selectTab(tab.name)"
@@ -40,7 +40,7 @@ const selectTab = (tabName: string) => {
 
 <style scoped lang="scss">
 $default_color:#71717A;
-$active_color: #18181B; 
+$active_color: #18181B;
 
 .dashboard-toolbar {
 	background-color: #fff;
@@ -48,6 +48,7 @@ $active_color: #18181B;
 	justify-content: center;
 	height: 48px;
 	padding-inline: 6px;
+  margin-top: 5px;
 
 	.toolbar-tabs {
 		display: flex;

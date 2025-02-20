@@ -22,7 +22,7 @@
           @mouseenter="showTooltip = true"
           @mouseleave="showTooltip = false"
         >
-          (+{{ hiddenBoardCount }})
+          ... (+{{ hiddenBoardCount }})
         </span>
 
         <div v-if="showTooltip" class="tooltip">
@@ -77,7 +77,7 @@ const showTooltip = ref(false)
 
 const displayedBoards = computed(() => {
   if (!Array.isArray(props.pack?.board) || props.pack.board.length === 0) return ''
-  return props.pack.board.slice(0, 2).join(', ') // Lấy 2 phần tử đầu
+  return props.pack.board.slice(0, 2).join(', ')
 })
 
 const hiddenBoardCount = computed(() => {
@@ -103,6 +103,8 @@ const deletePack = () => console.log('Deleting pack:', props.pack?.name)
 $title_color: #3f3f46;
 $description_color: #71717a;
 $border_color: #e4e4e7;
+$text_color: #71717A;
+$tooltip_color: #18181B;
 
 .packet-item {
   padding: 16px;
@@ -200,11 +202,11 @@ $border_color: #e4e4e7;
 }
 
 .board {
+  color: $text_color;
   position: relative;
 
   .more {
     cursor: pointer;
-    font-weight: bold;
   }
 
   .tooltip {
@@ -220,6 +222,7 @@ $border_color: #e4e4e7;
     padding: 8px 12px;
     white-space: nowrap;
     z-index: 10;
+    color: $tooltip_color;
 
     .tooltip-content {
       word-wrap: break-word;

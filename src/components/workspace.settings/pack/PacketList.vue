@@ -14,21 +14,21 @@ const packs = [
     name: 'Product Development',
     description: 'Tasks related to product development',
     stats: [4, 8, 13, 3],
-    board: 'Leanbase',
+    board: ['Leanbase'],
   },
   {
     id: 2,
     name: 'Approval & Feedback',
     description: 'Tasks related to approval and feedback',
     stats: [2, 5, 7, 1],
-    board: 'None',
+    board: ['None'],
   },
   {
     id: 3,
     name: 'Demo',
     description: 'Tasks related to demo',
     stats: [1, 3, 4, 0],
-    board: 'Bamboo, PrinBase, Front-Build, Dpro, Graphic design',
+    board: ['Bamboo', 'PrinBase', 'Front-Build', 'Dpro', 'Graphic design'],
   },
 ]
 </script>
